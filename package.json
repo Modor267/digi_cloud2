@@ -1,5 +1,6 @@
 {
   "name": "digi_cloud",
+  "homepage": "https://Modor267.github.io/digi_cloud2/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -17,6 +20,7 @@
     "@mui/material": "^5.14.13",
     "@mui/styled-engine-sc": "^6.0.0-alpha.1",
     "emailjs": "^4.0.3",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
