@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SingleServiceCard = ({ data }) => {
 	return (
 		<div className="single-card-container">
-			<Link className='Link singleServiceCard' to={'/wallets'}>
+			<Link className='Link singleServiceCard' to={'/digi_cloud2/wallets'}>
 					<div className='icon'>
 						<ConstructionIcon className='card-icon'  />
 					</div>

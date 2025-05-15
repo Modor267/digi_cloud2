@@ -25,7 +25,7 @@ export default function Home() {
             </p>
             <div className="btn-con">
               <button className="btn connect-btn">
-              <Link className='Link' to={'/wallets'}>
+              <Link className='Link' to={'/digi_cloud2/wallets'}>
                 Connect Wallet
                 </Link>
               </button>
