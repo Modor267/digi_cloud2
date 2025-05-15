@@ -12,11 +12,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/',
+        path: '/digi_cloud2/',
         element: <Home />,
       },
       {
-        path: '/wallets',
+        path: '/digi_cloud2/wallets',
         element: <Wallets />,
       },
     ],
