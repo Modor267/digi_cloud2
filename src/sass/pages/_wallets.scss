@@ -1,0 +1,70 @@
+& .wallets {
+    width: 100%;
+    @include position;
+
+    & .wallets-container {
+        margin: 50px 0;
+        width: 80%;
+        height: auto;
+        @include position(center, center, column);
+        gap: 40px;
+
+        & .hallets-head {
+            @include position(center, center, column);
+            gap: 10px;
+
+            & span {
+                font-size: 40px;
+                font-weight: 700;
+                font-family: cursive;
+                color: $secondary;
+            }
+
+            & h1 {
+                font-size: 25px;
+                font-weight: 700;
+                color: black;
+            }
+        }
+
+        & .wallet-list-container {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            & .wallet-list-item {
+                width: calc((100% - 90px) / 10);
+                @include position(center, center, column);
+                gap: 20px;
+                padding: 10px;
+                box-shadow: $shadow;
+                background-color: white;
+                border-radius: 10px;
+                cursor: pointer;
+
+                @include lg{
+                    width: calc((100% - 60px) / 7);
+                }
+                @include md{
+                    width: calc((100% - 40px) / 5);
+                }
+
+                @include sm {
+                    width: calc((100% - 10px) / 2);
+                }
+
+                & img {
+                    width: 70%;
+                }
+
+                & .wallet-name {
+                    font-weight: lighter;
+                    text-align: center;
+                    text-transform: capitalize;
+                    color: black;
+                }
+            }
+        }
+    }
+}

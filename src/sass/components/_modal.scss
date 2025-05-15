@@ -1,0 +1,162 @@
+.container {
+	transform: scale(0);
+	animation: pop 0.5s forwards;
+	width: 30vw;
+	height: 50vh;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	outline: none;
+	border-radius: 5px;
+	padding: 10px;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&.connect {
+		height: 85vh;
+
+		& .modal-top {
+			height: 10vh;
+			border-bottom: 1px solid $text;
+		}
+		& .tabs {
+			width: 80%;
+			display: flex;
+			& .tab {
+				@include position;
+				margin: 30px 0;
+				flex: 1;
+				border-radius: 20px;
+				color: black;
+				padding: 20px;
+				text-align: center;
+				cursor: pointer;
+				&:hover {
+					background-color: lightgray;
+				}
+				&.active {
+					background-color: #5878bc;
+					font-weight: bold;
+					color: white;
+				}
+			}
+		}
+		& .tab-body {
+			margin: 30px;
+			width: 80%;
+
+			& .singleTab-body {
+				@include position(center, flex-start, column);
+				& textarea,
+				& input {
+					resize: vertical;
+					color: black;
+					border-radius: 5px;
+					height: 15vh;
+					width: 100%;
+					border: 1px solid grey;
+					padding: 5px;
+					&:focus {
+						outline: none;
+					}
+				}
+				& input {
+					width: 80%;
+					height: 40px;
+					margin: 20px 0;
+				}
+				& p.tab-info {
+					font-weight: bold;
+					font-size: 14px;
+					color: #5878bc;
+					// margin: 20px 0;
+				}
+				& .submit-container {
+					& img {
+						width: 100px;
+					}
+					& button.submit-btn {
+						background-color: #2a498d;
+						padding: 10px 50px;
+						border-radius: 5px;
+						margin: 20px 0;
+					}
+				}
+			}
+		}
+	}
+	@include md {
+		width: 70vw;
+		height: 40vh;
+	}
+	@include sm {
+		width: 95vw;
+		height: 50vh;
+	}
+
+	& .modal-top {
+		height: 20%;
+		@include position(center, space-between);
+		& h2 {
+			font-size: 20px;
+			color: black;
+		}
+		& .closeIcon {
+			fill: black;
+			font-size: 40px;
+			cursor: pointer;
+		}
+	}
+
+	& .modal-body {
+		@include position(center, space-between, column);
+		width: 100%;
+		& .load-container {
+			@include position;
+			position: relative;
+			width: 70%;
+			height: 50px;
+			border: 1px solid red;
+			border-radius: 5px;
+			& img {
+				width: auto;
+				height: 100%;
+			}
+			& span {
+				color: red;
+				font-weight: bold;
+			}
+			& .manual-btn {
+				position: absolute;
+				top: 70%;
+				background-color: #353866;
+				padding: 10px 20px;
+				border-radius: 10px;
+				cursor: pointer;
+				&:hover {
+					background-color: #3b99fc;
+				}
+			}
+		}
+		& .modal-body-info {
+			@include position(flex-start, center, column);
+			width: 90%;
+			padding: 10px;
+			border: 1px solid $text;
+			margin-top: 100px;
+			& h3 {
+				color: black;
+				margin: 5px 0;
+			}
+			& p {
+				margin: 5px 0;
+				color: $text;
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+& .home {
+    width: 100%;
+    height: auto;
+
+
+    & .hero {
+        width: 100%;
+        background-color: $bg;
+        @include position;
+        min-height: 100vh;
+        height: auto;
+
+        & .hero-container {
+            width: 90%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            @include sm{
+                width: 95%;
+                padding: 20px 0;
+            }
+
+            & .hero-first {
+                width: 40%;
+                min-height: 100vh;
+                height: auto;
+                @include position(flex-start, center, column);
+                gap: 10px;
+                @include sm{
+                    width: 100%;
+                }
+
+                & h2 {
+                    font-size: 50px;
+                    margin: 0
+                }
+
+                & p {
+                    font-size: 20px;
+                }
+
+                & .btn-con {
+                    width: 100%;
+                    display: flex;
+                    gap: 20px;
+
+                    & button,
+                    & select {
+                        padding: 10px 15px;
+                        border-radius: 5px
+                    }
+
+                    & select {
+                        color: black
+                    }
+                }
+            }
+
+            & .hero-second {
+                @include position;
+                width: 50%;
+                height: 100vh;
+                @include sm{
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    & .services {
+        width: 100%;
+        height: auto;
+        background-color: $bg2;
+        @include position(center, flex-start, column);
+
+        & h2 {
+            width: 90%;
+            font-size: 30px;
+
+            @include sm{
+                font-size: 25px;
+            }
+        }
+
+        & .services-container {
+            padding: 50px 0;
+            width: 80%;
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+    }
+}
